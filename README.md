@@ -7,7 +7,7 @@ Aplicación Laravel 12 (monolítica) tipo Change.org: peticiones, firmas, catego
 Requisitos: Docker Desktop (o Docker Engine + Docker Compose).
 
 ```bash
-git clone <url-del-repositorio>
+git clone https://github.com/daw132026/Monolitic_Change.git
 cd Monolitic_Change
 docker compose up -d --build
 docker compose exec app php artisan db:seed --force   # categorías + usuario de prueba
