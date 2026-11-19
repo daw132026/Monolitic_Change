@@ -1,0 +1,64 @@
+services:
+  # Aplicación Laravel (PHP 8.2 + Apache)
+  app:
+    build: .
+    image: monolitic-change-app
+    container_name: change_app
+    restart: unless-stopped
+    ports:
+      - "8080:80"
+    environment:
+      APP_NAME: "Change.org"
+      APP_ENV: production
+      APP_DEBUG: "false"
+      APP_URL: http://localhost:8080
+      DB_CONNECTION: mysql
+      DB_HOST: db
+      DB_PORT: 3306
+      DB_DATABASE: change_monol
+      DB_USERNAME: change
+      DB_PASSWORD: change_pass
+      SESSION_DRIVER: database
+      CACHE_STORE: database
+    volumes:
+      - uploads:/var/www/html/storage/app/public
+    depends_on:
+      db:
+        condition: service_healthy
+
+  # Base de datos MySQL 8
+  db:
+    image: mysql:8.0
+    container_name: change_db
+    restart: unless-stopped
+    environment:
+      MYSQL_DATABASE: change_monol
+      MYSQL_USER: change
+      MYSQL_PASSWORD: change_pass
+      MYSQL_ROOT_PASSWORD: root_pass
+    ports:
+      - "3307:3306"
+    volumes:
+      - db_data:/var/lib/mysql
+    healthcheck:
+      test: ["CMD", "mysqladmin", "ping", "-h", "localhost", "-uroot", "-proot_pass"]
+      interval: 5s
+      timeout: 5s
+      retries: 20
+
+  # phpMyAdmin para ver la BBDD del contenedor
+  phpmyadmin:
+    image: phpmyadmin:5
+    container_name: change_pma
+    restart: unless-stopped
+    ports:
+      - "8081:80"
+    environment:
+      PMA_HOST: db
+      PMA_PORT: 3306
+    depends_on:
+      - db
+
+volumes:
+  db_data:
+  uploads:

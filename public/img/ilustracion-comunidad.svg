@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 240" fill="none" stroke="#0038bc" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+  <!-- Ilustración original: tres bocadillos de diálogo y una mano alzada -->
+  <rect x="30" y="40" width="120" height="70" rx="14" fill="#ffdb00" stroke="none" opacity=".7"/>
+  <rect x="24" y="34" width="120" height="70" rx="14" fill="none"/>
+  <path d="M50 104 L44 128 L72 104"/>
+  <path d="M46 60 H120"/><path d="M46 78 H100"/>
+  <rect x="170" y="20" width="120" height="64" rx="14" fill="#fff"/>
+  <path d="M260 84 L268 106 L240 84"/>
+  <circle cx="200" cy="52" r="5" fill="#0038bc"/><circle cx="230" cy="52" r="5" fill="#0038bc"/><circle cx="260" cy="52" r="5" fill="#0038bc"/>
+  <rect x="150" y="130" width="140" height="74" rx="14" fill="#f0f7ff"/>
+  <path d="M176 204 L170 226 L198 204"/>
+  <path d="M188 166 l14 14 l30 -30"/>
+  <!-- mano alzada -->
+  <path d="M74 228 V176 q0 -8 8 -8 q8 0 8 8 V150 q0 -8 8 -8 q8 0 8 8 v26 v-30 q0 -8 8 -8 q8 0 8 8 v32 v-22 q0 -8 8 -8 q8 0 8 8 v44 q0 22 -18 34 V228" fill="#fff"/>
+  <path d="M74 186 q-14 -14 -24 -4 q-6 6 4 18 l20 26"/>
+  <path d="M300 130 l10 -6"/><path d="M14 150 l10 4"/><path d="M160 12 l4 -8"/>
+</svg>

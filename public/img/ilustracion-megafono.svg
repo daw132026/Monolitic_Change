@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 200" fill="none" stroke="#0038bc" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+  <!-- Ilustración original: megáfono con ondas -->
+  <circle cx="92" cy="104" r="46" fill="#ffdb00" stroke="none" opacity=".55"/>
+  <path d="M54 92 L132 56 L132 150 L54 116 Z" fill="#fff"/>
+  <rect x="36" y="90" width="20" height="28" rx="4" fill="#fff"/>
+  <path d="M66 117 L76 160 L94 160 L88 124"/>
+  <path d="M132 56 Q146 103 132 150"/>
+  <path d="M154 86 Q164 103 154 120"/>
+  <path d="M170 74 Q186 103 170 132"/>
+  <path d="M186 62 Q208 103 186 144"/>
+  <path d="M120 28 L124 16"/><path d="M146 36 L156 26"/><path d="M98 30 L94 18"/>
+  <path d="M206 160 l8 -4"/><path d="M24 54 l10 4"/>
+</svg>

@@ -1,0 +1,55 @@
+@extends('layouts.public')
+
+@section('content')
+    <div class="container py-5" style="max-width: 480px">
+        <h1 class="mb-4 text-center">Iniciar sesión</h1>
+
+        @if (session('status'))
+            <div class="alert alert-success">{{ session('status') }}</div>
+        @endif
+
+        <div class="card shadow-sm">
+            <div class="card-body p-4">
+                <form method="POST" action="{{ route('login') }}">
+                    @csrf
+
+                    <div class="mb-3">
+                        <label for="email" class="form-label">Email</label>
+                        <input id="email" type="email" name="email" value="{{ old('email') }}"
+                               class="form-control @error('email') is-invalid @enderror"
+                               required autofocus autocomplete="username">
+                        @error('email')
+                            <div class="invalid-feedback">{{ $message }}</div>
+                        @enderror
+                    </div>
+
+                    <div class="mb-3">
+                        <label for="password" class="form-label">Contraseña</label>
+                        <input id="password" type="password" name="password"
+                               class="form-control @error('password') is-invalid @enderror"
+                               required autocomplete="current-password">
+                        @error('password')
+                            <div class="invalid-feedback">{{ $message }}</div>
+                        @enderror
+                    </div>
+
+                    <div class="form-check mb-3">
+                        <input id="remember_me" type="checkbox" name="remember" class="form-check-input">
+                        <label for="remember_me" class="form-check-label">Recordarme</label>
+                    </div>
+
+                    <div class="d-grid mb-3">
+                        <button type="submit" class="btn btn-danger btn-lg">Entrar</button>
+                    </div>
+
+                    <div class="d-flex justify-content-between small">
+                        @if (Route::has('password.request'))
+                            <a href="{{ route('password.request') }}" class="link-secondary">¿Has olvidado tu contraseña?</a>
+                        @endif
+                        <a href="{{ route('register') }}" class="link-danger">Crear cuenta</a>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+@endsection

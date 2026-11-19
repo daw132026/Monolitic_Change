@@ -1,0 +1,16 @@
+/* Estilos propios de Change.org.
+   Casi todo lo hace Bootstrap con sus clases; aquí solo va lo que Bootstrap no trae. */
+
+/* Que el pie de página quede abajo aunque la página tenga poco contenido */
+html, body {
+    height: 100%;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+}
+
+footer {
+    margin-top: auto !important;
+}
